@@ -1,21 +1,43 @@
-import React ,{useState}from 'react'
-import Props from './Components/Props/Props.jsx'
-import './App.css'
+import React from 'react'
+import Profile from './Components/ConditionRender/Profile.jsx'
+
 const App = () => {
-  const [data,setdata] = useState("Anil")
-  function update(){
-     setdata("Ashu")
-  }
   return (
-   <>
-   <Props  name={data} email={"789@yho"} other = {{address:"jaipur",mobile:"111"}}></Props>
-   <Props name={"Shekhar"} email={"989@yho"} other = {{address:"delhi",mobile:"000"}}></Props>
-   <button onClick={update}>Update first</button>
-   </>
+    <>
+    <Profile></Profile>
+    </>
   )
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+//Props class
+// import React ,{useState}from 'react'
+// import Props from './Components/Props/Props.jsx'
+// import './App.css'
+// const App = () => {
+//   const [data,setdata] = useState("Anil")
+//   function update(){
+//      setdata("Ashu")
+//   }
+//   return (
+//    <>
+//    <Props  name={data} email={"789@yho"} other = {{address:"jaipur",mobile:"111"}}></Props>
+//    <Props name={"Shekhar"} email={"989@yho"} other = {{address:"delhi",mobile:"000"}}></Props>
+//    <button onClick={update}>Update first</button>
+//    </>
+//   )
+// }
+
+// export default App
 
 
 
