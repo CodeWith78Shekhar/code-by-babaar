@@ -1,10 +1,13 @@
 import React from 'react'
-import Profile from './Components/ConditionRender/Profile.jsx'
+import Func from './Components/FunctionProps/Function.jsx'
 
+function getData(){
+     alert("function called")
+}
 const App = () => {
   return (
     <>
-    <Profile></Profile>
+    <Func data = {getData}></Func>
     </>
   )
 }
