@@ -1,13 +1,13 @@
 import React from 'react'
-import Func from './Components/FunctionProps/Function.jsx'
+import Boot from './Components/Bootstrap/Boot.jsx'
 
-function getData(){
-     alert("function called")
-}
+// function getData(){
+//      alert("function called")
+// }
 const App = () => {
   return (
     <>
-    <Func data = {getData}></Func>
+   <Boot/>
     </>
   )
 }
