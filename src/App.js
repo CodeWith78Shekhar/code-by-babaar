@@ -1,5 +1,5 @@
 import React from 'react'
-import Boot from './Components/Bootstrap/Boot.jsx'
+import Map from './Components/MapFunc/Map.jsx'
 
 // function getData(){
 //      alert("function called")
@@ -7,7 +7,7 @@ import Boot from './Components/Bootstrap/Boot.jsx'
 const App = () => {
   return (
     <>
-   <Boot/>
+  <Map/>
     </>
   )
 }
