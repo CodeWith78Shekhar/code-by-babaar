@@ -1,5 +1,5 @@
 import React from 'react'
-import Map from './Components/MapFunc/Map.jsx'
+import Children from './Components/TagChildren/Children'
 
 // function getData(){
 //      alert("function called")
@@ -7,7 +7,7 @@ import Map from './Components/MapFunc/Map.jsx'
 const App = () => {
   return (
     <>
-  <Map/>
+  <Children>Props children 2</Children>
     </>
   )
 }
