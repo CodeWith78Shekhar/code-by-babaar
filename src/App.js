@@ -1,5 +1,6 @@
 import React from 'react'
-import Children from './Components/TagChildren/Children'
+import Boot from './Components/Bootstrap/Boot.jsx'
+
 
 // function getData(){
 //      alert("function called")
@@ -7,7 +8,7 @@ import Children from './Components/TagChildren/Children'
 const App = () => {
   return (
     <>
-  <Children>Props children 2</Children>
+    <Boot />
     </>
   )
 }

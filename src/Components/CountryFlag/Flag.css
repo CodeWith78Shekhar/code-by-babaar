@@ -1,0 +1,42 @@
+
+.containerX{
+    border: 2px solid black;
+   height: 60vh;
+   margin-top: 10vh;
+   width: 70%;
+   margin-left: 15%;
+    display: flex;
+}
+
+.box{
+    border: 2px solid green;
+    width: 50%;
+    height: 100%;
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1 input{
+    width: 60%;
+}
+
+.box1 button{
+    margin-top: 3vh;
+}
+
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 img{
+    /* border: 2px solid black; */
+    width: 70%;
+    height: 50%;
+}
