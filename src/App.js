@@ -1,5 +1,5 @@
 import React from 'react'
-import Comp from './Components/ReuseComp/Comp.jsx'
+import Parent from './Components/DataChildToParent/Parent.jsx'
 
 
 // function getData(){
@@ -8,7 +8,7 @@ import Comp from './Components/ReuseComp/Comp.jsx'
 const App = () => {
   return (
     <>
-   <Comp/>
+   <Parent/>
     </>
   )
 }
