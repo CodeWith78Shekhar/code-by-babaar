@@ -1,5 +1,5 @@
 import React from 'react'
-import Boot from './Components/Bootstrap/Boot.jsx'
+import Comp from './Components/ReuseComp/Comp.jsx'
 
 
 // function getData(){
@@ -8,7 +8,7 @@ import Boot from './Components/Bootstrap/Boot.jsx'
 const App = () => {
   return (
     <>
-    <Boot />
+   <Comp/>
     </>
   )
 }
