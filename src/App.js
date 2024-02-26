@@ -1,5 +1,5 @@
 import React from 'react'
-import Parent from './Components/DataChildToParent/Parent.jsx'
+import Slider from './Components/Bootstrap/Slider.jsx'
 
 
 // function getData(){
@@ -8,7 +8,7 @@ import Parent from './Components/DataChildToParent/Parent.jsx'
 const App = () => {
   return (
     <>
-   <Parent/>
+   <Slider/>
     </>
   )
 }
