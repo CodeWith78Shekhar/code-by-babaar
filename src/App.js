@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider from './Components/Bootstrap/Slider.jsx'
+import Top from './Components/Bootstrap/TopRated.jsx'
 
 
 // function getData(){
@@ -8,7 +8,7 @@ import Slider from './Components/Bootstrap/Slider.jsx'
 const App = () => {
   return (
     <>
-   <Slider/>
+<Top/>
     </>
   )
 }
