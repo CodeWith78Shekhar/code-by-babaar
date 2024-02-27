@@ -1,14 +1,21 @@
 import React from 'react'
-import Top from './Components/Bootstrap/TopRated.jsx'
+import Home from './RoutingComponent/BasicRoutin/Home.jsx'
+import About from './RoutingComponent/BasicRoutin/About.jsx'
+import Navbar from './RoutingComponent/BasicRoutin/Navbar.jsx'
+import { BrowserRouter, Routes, Route,Link } from 'react-router-dom'
 
 
-// function getData(){
-//      alert("function called")
-// }
 const App = () => {
   return (
     <>
-<Top/>
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+       
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
