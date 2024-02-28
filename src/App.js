@@ -1,18 +1,24 @@
 import React from 'react'
+import Slider from './Components/Bootstrap/Slider.jsx'
+
 import Home from './RoutingComponent/BasicRoutin/Home.jsx'
 import About from './RoutingComponent/BasicRoutin/About.jsx'
 import Navbar from './RoutingComponent/BasicRoutin/Navbar.jsx'
-import { BrowserRouter, Routes, Route,Link } from 'react-router-dom'
+import Page404 from './RoutingComponent/BasicRoutin/Page404.jsx'
+import { BrowserRouter, Routes, Route,Link, Navigate } from 'react-router-dom'
 
 
 const App = () => {
   return (
     <>
+   
     <BrowserRouter>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/*' element={<Page404/>}/>
+        {/* <Route path='/*' element={<Navigate to="/"/>}/> */}
        
       </Routes>
     </BrowserRouter>
