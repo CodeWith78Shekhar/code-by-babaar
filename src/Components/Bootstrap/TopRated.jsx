@@ -3,17 +3,35 @@ import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import data from "./data.js";
+ import data from "./data.js";
 
 export default function App() {
  const[rate , setrate] = useState("")
-
+  const[data,setdata] = useState([])
 
 function clickHandler(){
      setrate(4.4)
 
  
 }
+
+useEffect(()=>{
+
+  let fetchB = async ()=>{
+    let data1 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.95250&lng=75.71050&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+
+    console.log(data1)
+  
+    let data2 = await data1.json()
+    
+    setdata(data2.data.cards[1].card?.card.gridElements.infoWithStyle.restaurants)
+     console.log(data2?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0])
+  }
+  
+
+    fetchB()
+},[])
+
 
 
 

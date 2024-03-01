@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider from './Components/Bootstrap/TopRated.jsx'
+import Top from './Components/Bootstrap/TopRated.jsx'
 import Nav from './Components/Navbar/Navbar.jsx'
 
 import Home from './RoutingComponent/BasicRoutin/Home.jsx'
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
     <Nav/>
-   <Slider/>
+   <Top/>
    
 
     <BrowserRouter>
