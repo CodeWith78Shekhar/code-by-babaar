@@ -1,6 +1,6 @@
+
 import React from 'react'
-import Top from './Components/Bootstrap/TopRated.jsx'
-import Nav from './Components/Navbar/Navbar.jsx'
+
 
 import Home from './RoutingComponent/BasicRoutin/Home.jsx'
 import About from './RoutingComponent/BasicRoutin/About.jsx'
@@ -13,9 +13,10 @@ import { BrowserRouter, Routes, Route, Link , Navigate } from 'react-router-dom'
 const App = () => {
   return (
     <>
-    <Nav/>
-   <Top/>
+    {/* <Nav/>
+   <Top/> */}
    
+
 
     <BrowserRouter>
       <Navbar/>
@@ -30,7 +31,7 @@ const App = () => {
         {/* //Navlink is basically use for give className to link for change style and when we click on link then active class activate in link so we change style of active link so we know abot the exact page */}
        
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> 
     </>
   )
 }
