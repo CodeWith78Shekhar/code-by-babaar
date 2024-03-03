@@ -52,7 +52,7 @@ function clickHandler(){
     <input type="text" onChange={ChangeHandler}   />
     <button onClick={clickHandler}>Submit</button>
     <div className="container" style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between' , height:'fit-content',borderRadius:'20px', marginTop:'20px' }}>
-        {/* {
+        {
           
          // by map 
          
@@ -72,9 +72,9 @@ function clickHandler(){
       </Card.Body>
     </Card> : null
     ))
-        }  */}
+        } 
 
-        {
+        {/* {
 
           data.filter((e)=>(
 
@@ -98,7 +98,7 @@ function clickHandler(){
     
   
 
-        }
+        } */}
    </div>
 
     </>
