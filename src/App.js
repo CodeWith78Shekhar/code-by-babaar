@@ -1,51 +1,67 @@
 
 import React from 'react'
 import Slider from "./Components/Bootstrap/Slider.jsx"
-
-import Home from './RoutingComponent/BasicRoutin/Home.jsx'
-import About from './RoutingComponent/BasicRoutin/About.jsx'
-import Navbar from './RoutingComponent/BasicRoutin/Navbar.jsx'
-import Page404 from './RoutingComponent/BasicRoutin/Page404.jsx'
-import Params from './RoutingComponent/BasicRoutin/Params.jsx'
-import { BrowserRouter, Routes, Route, Link , Navigate } from 'react-router-dom'
-import Contact from './RoutingComponent/BasicRoutin/Contact.jsx'
-import Company from './RoutingComponent/BasicRoutin/Company.jsx'
-import Channel from './RoutingComponent/BasicRoutin/Channel.jsx'
-import Others from './RoutingComponent/BasicRoutin/Others.jsx'
+import Top from "./Components/Bootstrap/TopRated.jsx"
+import  Navbar from './Components/Navbar/Navbar.jsx'
 
 
 const App = () => {
   return (
-    <>
-    {/* <Nav/>
-   <Top/> */}
+    <div>
+     <Navbar/>
+     <Slider/>
    
-{/* <Slider/> */}
-
-    <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        {/* <Route path='/*' element={<Page404/>}/> */}
-        <Route path='/user/:name' element={<Params/>}/>
-        <Route path='/*' element={<Navigate to="/"/>}/> 
-        <Route path='/contact/' element={<Contact/>}>
-            <Route path='company' element={<Company/>}/>
-            <Route path='channel' element={<Channel/>}/>
-            <Route path='other' element={<Others/>}/>
-        </Route>
-        {/* //Params - useparams we use because we create one card and show multiple card by changing the path by name   */}
-        {/* //we use Navigate for unknown path and we show the default path */}
-        {/* //Navlink is basically use for give className to link for change style and when we click on link then active class activate in link so we change style of active link so we know abot the exact page */}
-       
-      </Routes>
-    </BrowserRouter> 
-    </>
+    </div>
   )
 }
 
 export default App
+
+
+// import Home from './RoutingComponent/BasicRoutin/Home.jsx'
+// import About from './RoutingComponent/BasicRoutin/About.jsx'
+// import Navbar from './RoutingComponent/BasicRoutin/Navbar.jsx'
+// import Page404 from './RoutingComponent/BasicRoutin/Page404.jsx'
+// import Params from './RoutingComponent/BasicRoutin/Params.jsx'
+// import { BrowserRouter, Routes, Route, Link , Navigate } from 'react-router-dom'
+// import Contact from './RoutingComponent/BasicRoutin/Contact.jsx'
+// import Company from './RoutingComponent/BasicRoutin/Company.jsx'
+// import Channel from './RoutingComponent/BasicRoutin/Channel.jsx'
+// import Others from './RoutingComponent/BasicRoutin/Others.jsx'
+
+
+// const App = () => {
+//   return (
+//     <>
+//     {/* <Nav/>
+//    <Top/> */}
+   
+// {/* <Slider/> */}
+
+//     <BrowserRouter>
+//       <Navbar/>
+//       <Routes>
+//         <Route path='/' element={<Home/>}/>
+//         <Route path='/about' element={<About/>}/>
+//         {/* <Route path='/*' element={<Page404/>}/> */}
+//         <Route path='/user/:name' element={<Params/>}/>
+//         <Route path='/*' element={<Navigate to="/"/>}/> 
+//         <Route path='/contact/' element={<Contact/>}>
+//             <Route path='company' element={<Company/>}/>
+//             <Route path='channel' element={<Channel/>}/>
+//             <Route path='other' element={<Others/>}/>
+//         </Route>
+//         {/* //Params - useparams we use because we create one card and show multiple card by changing the path by name   */}
+//         {/* //we use Navigate for unknown path and we show the default path */}
+//         {/* //Navlink is basically use for give className to link for change style and when we click on link then active class activate in link so we change style of active link so we know abot the exact page */}
+       
+//       </Routes>
+//     </BrowserRouter> 
+//     </>
+//   )
+// }
+
+// export default App
 
 
 

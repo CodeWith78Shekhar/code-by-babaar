@@ -3,14 +3,15 @@ import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
- import data from "./data.js";
+// import data from "./data.js";
 
 export default function App() {
  const[rate , setrate] = useState("")
-  const[data,setdata] = useState([])
+   const[data,setdata] = useState([])
 
-function clickHandler(){
-     setrate(4.4)
+function clickHandler(e){
+     setrate(e.target.value)
+     console.log(e.target.value)
 
  
 }
@@ -61,7 +62,15 @@ useEffect(()=>{
 
     <br />
     
-    <button onClick={clickHandler}>Submit</button>
+    <select name="" id="" onClick={clickHandler}  style={{marginLeft:"7vw" , background:"brown" , color:"white" , width:"9vw", height:"6vh", border:"none"}}>
+      <option value="0">Select restro</option>
+      <option value="4.2">4.2 rating</option>
+      <option value="4.3">4.3 rating</option>
+      <option value="4.4">4.4 rating</option>
+      <option value="4.5">4.5 rating</option>
+      <option value="4.6">4.6 rating</option>
+      
+    </select>
     <div className="container" style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between' , height:'fit-content',borderRadius:'20px', marginTop:'20px' }}>
        {/* {
           data.map((e)=>(

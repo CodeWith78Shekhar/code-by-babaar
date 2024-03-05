@@ -3,15 +3,16 @@ import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import data from "./data.js";
+// import data from "./data.js";
 
 export default function App() {
   const[data1 , setdata1] = useState("")
   const[data2 , setdata2] = useState("")
+  const[data , setdata] = useState([])
   
 function ChangeHandler(e){
       setdata1(e.target.value)
-     
+    
 }
 
 function clickHandler(){
@@ -19,6 +20,25 @@ function clickHandler(){
 
  
 }
+
+useEffect(()=>{
+
+  let fetchB = async ()=>{
+    let data3 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.95250&lng=75.71050&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+
+   // console.log(data1)
+  
+    let data4 = await data3.json()
+    
+    setdata(data4.data.cards[1].card?.card.gridElements.infoWithStyle.restaurants)
+     console.log(data4?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0])
+  }
+  
+
+    fetchB()
+},[data])
+
+
 
 
 
@@ -49,10 +69,10 @@ function clickHandler(){
     </div>
 
     <br />
-    <input type="text" onChange={ChangeHandler}   />
-    <button onClick={clickHandler}>Submit</button>
+    <input type="text" onChange={ChangeHandler}  style={{marginLeft:"7vw" }} />
+    <button onClick={clickHandler} style={{marginLeft:"2vw" }}>Submit</button>
     <div className="container" style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between' , height:'fit-content',borderRadius:'20px', marginTop:'20px' }}>
-        {
+        {/* {
           
          // by map 
          
@@ -60,7 +80,7 @@ function clickHandler(){
 
             data.map((e)=>(
               
-              data2 === e.info.areaName ? <Card style={{ width: '18rem' ,marginBottom:'2vh' }}>
+              e.info.name.toLocaleLowerCase().includes(data1.toLocaleLowerCase())    ? <Card style={{ width: '18rem' ,marginBottom:'2vh' }}>
       <Card.Img variant="top" style={{ height:'38vh' }} src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+e.info.cloudinaryImageId} />
       <Card.Body>
         <Card.Title style={{ width: '100%' ,height:'8vh' }} >{e.info.name}</Card.Title>
@@ -72,15 +92,16 @@ function clickHandler(){
       </Card.Body>
     </Card> : null
     ))
-        } 
+        }  */}
 
-        {/* {
+        {
 
           data.filter((e)=>(
-
-            e.info.cuisines.filter((n)=>(
-              n == data2
-            )) == data2
+             e.info.cuisines.filter((n) => (
+    n.toLowerCase().includes(data1.toLowerCase())
+  )).length > 0
+                
+           
           )).map((en)=>(
 
             <Card style={{ width: '18rem' ,marginBottom:'2vh' }}>
@@ -98,7 +119,7 @@ function clickHandler(){
     
   
 
-        } */}
+        }
    </div>
 
     </>
