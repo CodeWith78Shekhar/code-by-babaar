@@ -1,16 +1,12 @@
 
 import React from 'react'
-import Slider from "./Components/Bootstrap/Slider.jsx"
-import Top from "./Components/Bootstrap/TopRated.jsx"
-import  Navbar from './Components/Navbar/Navbar.jsx'
-
+import Object from './Redux/StateWithObject/SteteWithObject.jsx'
 
 const App = () => {
+ 
   return (
     <div>
-     <Navbar/>
-     <Slider/>
-   
+    <Object/>
     </div>
   )
 }
