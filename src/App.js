@@ -1,12 +1,12 @@
 
 import React from 'react'
-import Object from './Redux/StateWithObject/SteteWithObject.jsx'
+import Parent from './Redux/ContextApi/Parent'
 
 const App = () => {
  
   return (
     <div>
-    <Object/>
+    <Parent/>
     </div>
   )
 }
